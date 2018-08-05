@@ -1,5 +1,6 @@
 public class DepthFirstSearch {
-    static int matrix[][] = {
+    /*матрица смежности графа*/
+    private static int matrix[][] = {
            //0  1  2  3  4  5
             {1, 1, 1, 0, 0, 0}, //0
             {1, 1, 0, 1, 1, 0}, //1
@@ -13,6 +14,7 @@ public class DepthFirstSearch {
         DFS(0);
     }
 
+    //рекурсивный алгоритм обхода графа
     private static void DFS(int vertex){
         for (int i = vertex+1; i < 6; i++){
             if (matrix[vertex][i] == 1) {
